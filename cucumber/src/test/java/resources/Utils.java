@@ -37,8 +37,7 @@ public class Utils {
         return prop.getProperty(key);
     }
 
-    public String getJsonPath(Response response, String key) 
-    {
+    public String getJsonPath(Response response, String key) {
         String resp = response.asString();
         JsonPath js = new JsonPath(resp);
         return js.get(key).toString();
